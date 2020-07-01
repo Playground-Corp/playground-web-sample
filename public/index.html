@@ -25,6 +25,13 @@
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap&subset=latin-ext" rel="stylesheet">
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="/__/firebase/7.15.5/firebase-app.js"></script>
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="/__/firebase/7.15.5/firebase-analytics.js"></script>
+  <!-- Initialize Firebase -->
+  <script src="/__/firebase/init.js"></script>
 </head>
 <body>
 <header class="l-header fixed-nav">
@@ -78,7 +85,7 @@
   <section class="c-section" id="about">
     <div class="c-section-wrapin">
       <h2 class="p-headline__top">Matchaとは</h2>
-      <hr class="c-section__line"/>
+      <hr class="c-section__line-secondary"/>
       <div class="module-spacer--small"></div>
       <div>
         <p>
@@ -98,42 +105,108 @@
   <section class="c-section c-bg-secondary" id="services">
     <div class="c-section-wrapin">
       <h2 class="p-headline__top">サービス内容</h2>
-      <hr class="c-section__line"/>
+      <hr class="c-section__line-primary"/>
       <div class="module-spacer--medium"></div>
       <div class="p-grid__list">
         <article class="p-grid__list-item animated slow" data-animate="fadeIn">
-          <h3>講師数は全国10,000人</h3>
-          <img class="p-media__thumb" src="assets/img/view/instructor.jpg" />
+          <h3>月額¥9,800で学び放題</h3>
+          <div class="p-media__thumb">
+            <img src="assets/img/view/programming.jpg" />
+          </div>
           <p>
-            「学びたい」人は18の質問に答えるだけで、あなたと相性の良い講師をAIが診断します。講師の数は全国10,000人以上。
+            あなたの好きな講師を選ぶと、講師の教材を使って自習しながら、週2回の授業を受けることができます。
           </p>
         </article>
         <article class="p-grid__list-item animated slow" data-animate="fadeIn">
-          <h3>完全オンライン授業</h3>
-          <img class="p-media__thumb" src="assets/img/view/online.jpg" />
+          <h3>充実した授業</h3>
+          <div class="p-media__thumb">
+            <img src="assets/img/view/development.jpg" />
+          </div>
           <p>
-            場所の制限がないから、あなたにマッチする「人」と「時間」と「場所」で、思う存分学ぶことができます。
+            講師との授業時間は1回2時間。分からないことを1つ1つ、じっくり教えてもらうことができます。
           </p>
         </article>
         <article class="p-grid__list-item animated slow" data-animate="fadeIn">
-          <h3>選べる科目は100種類</h3>
-          <img class="p-media__thumb" src="assets/img/view/curriculum.jpg" />
+          <h3>公正なレビュー</h3>
+          <div class="p-media__thumb">
+            <img src="assets/img/view/book-stairs.jpg" />
+          </div>
           <p>
-            あなたの「学びたい」気持ちに応える充実した科目数をご用意しています。料理、裁縫、デザイン、プログラミングなど、趣味からスキルアップまで幅広く対応。
+            講師は生徒からのレビューを受けるので、常に真剣です。生徒からのレビューは全て公開されています。
           </p>
         </article>
       </div>
     </div>
   </section>
 
-  <section>
-    <div class="module-spacer--medium"></div>
+  <section class="c-section" id="features">
+    <div class="c-section-wrapin">
+      <h2 class="p-headline__top">Matchaの特徴</h2>
+      <hr class="c-section__line-secondary"/>
+      <div class="module-spacer--medium"></div>
+      <div class="p-grid__list">
+        <article class="p-grid__list-item no-border">
+          <h3>講師数は全国10,000人</h3>
+          <div class="p-media__thumb">
+            <img src="assets/img/view/instructors.jpg" />
+          </div>
+          <p>
+            現在、Matchaには全国10,000人以上の講師が登録しています。土日や夜間に対応可能な講師も多数。
+          </p>
+        </article>
+        <article class="p-grid__list-item no-border">
+          <h3>完全オンライン授業</h3>
+          <div class="p-media__thumb">
+            <img src="assets/img/view/online.jpg" />
+          </div>
+          <p>
+            場所の制限がないから、あなたにマッチする「人」と「時間」と「場所」で、思う存分学ぶことができます。
+          </p>
+        </article>
+        <article class="p-grid__list-item no-border">
+          <h3>選べる科目は100種類</h3>
+          <div class="p-media__thumb">
+            <img src="assets/img/view/curriculum.jpg" />
+          </div>
+          <p>
+            あなたの「学びたい」気持ちに応える充実した科目数をご用意しています。料理、裁縫、デザイン、プログラミングなど、趣味からスキルアップまで幅広く対応。
+          </p>
+        </article>
+        <article class="p-grid__list-item no-border">
+          <h3>AIによる相性診断</h3>
+          <div class="p-media__thumb">
+            <img src="assets/img/view/instructor.jpg" />
+          </div>
+          <p>
+            「学びたい」人は18の質問に答えるだけで、あなたと相性の良い講師をAIが診断します。
+          </p>
+        </article>
+        <article class="p-grid__list-item no-border">
+          <h3>お試し授業がある</h3>
+          <div class="p-media__thumb">
+            <img src="assets/img/view/shakehands.jpg" />
+          </div>
+          <p>
+            アカウント登録後、初めての授業は無料で受講できます。講師の授業を継続するか選べます。2回目以降もお試し授業は¥1,980で受講可能です。
+          </p>
+        </article>
+        <article class="p-grid__list-item no-border">
+          <h3>あなたも講師になれる</h3>
+          <div class="p-media__thumb">
+            <img src="assets/img/view/upstairs.jpg" />
+          </div>
+          <p>
+            Matchaの講師の約1割が、もともとMatchaで生徒として学んでいた方でした。Matchaで学んだことをMatchaで教える、そんなエコシステムがあります。
+          </p>
+        </article>
+      </div>
+    </div>
   </section>
 
   <section class="c-section c-bg-primary" id="contact">
     <div class="c-section-wrapin p-grid__contact">
       <h2>お問い合わせ・資料請求</h2>
-      <hr class="c-section__line"/>
+      <hr class="c-section__line-secondary"/>
       <div class="description">
         <p>
           Matchaのサービス内容をもっと知ってもらうために<br>資料を無料配布しております。
