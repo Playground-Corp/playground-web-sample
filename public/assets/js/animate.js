@@ -1,6 +1,6 @@
 $(window).on('load scroll', function(){
   //animatedのclassを持った要素をセレクタに指定
-  const elem = $('.animated');
+  const elem = $('.animate__animated');
 
   elem.each(function () {
 
